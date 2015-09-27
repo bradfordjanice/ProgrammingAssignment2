@@ -103,3 +103,46 @@ In order to complete this assignment, you must do the following:
 ### Grading
 
 This assignment will be graded via peer assessment.
+
+### Added by me... how to test this assignment
+Great discussion about assignment
+https://class.coursera.org/rprog-032/forum/thread?thread_id=44
+
+> source('~/Documents/datasciencecoursera/ProgrammingAssignment2/cachematrix.R')
+> a <- matrix(1:4, ncol = 2, nrow = 2)
+> a
+     [,1] [,2]
+[1,]    1    3
+[2,]    2    4
+> x <- makeCacheMatrix(a)
+> cacheSolve(x)
+     [,1] [,2]
+[1,]   -2  1.5
+[2,]    1 -0.5
+###### NOTICE NO CACHING MESSAGE ABOVE ######
+
+> cacheSolve(x)
+getting cached data
+     [,1] [,2]
+[1,]   -2  1.5
+[2,]    1 -0.5
+###### NOTICE CACHING MESSAGE ABOVE ######
+
+> a <- matrix(4:9, ncol = 2, nrow = 2)
+> a
+     [,1] [,2]
+[1,]    4    6
+[2,]    5    7
+> x <- makeCacheMatrix(a)
+> cacheSolve(x)
+     [,1] [,2]
+[1,] -3.5    3
+[2,]  2.5   -2
+###### NOTICE NO CACHING MESSAGE ABOVE ######
+
+> cacheSolve(x)
+getting cached data
+     [,1] [,2]
+[1,] -3.5    3
+[2,]  2.5   -2
+###### NOTICE NO CACHING MESSAGE ABOVE ######
