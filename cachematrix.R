@@ -1,3 +1,5 @@
+## Programming Assignment 2
+
 ## These R functions are able to cache the potentially time-consuming 
 ## computation of inverting a matrix.  If the content of a matrix
 ## is not changing it may make sense to cache the inverse rather than
